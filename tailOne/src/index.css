@@ -70,3 +70,11 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+@layer components{
+  .exampleCard{
+    background-color: theme("colors.randomClor");
+    /* border: 1px solid black;  */
+    @apply border-solid border-2 border-black;
+  }
+}
