@@ -1,3 +1,42 @@
+# THE REAL GETTING STARTED 
+
+npx create-react-app reactlrn
+
+and then i got some error 
+"Installing template dependencies using npm...
+npm error code ERESOLVE
+npm error ERESOLVE unable to resolve dependency tree
+npm error
+npm error While resolving: reactlrn@0.1.0
+npm error Found: react@19.0.0
+npm error node_modules/react
+npm error   react@"^19.0.0" from the root project
+npm error
+npm error Could not resolve dependency:
+npm error peer react@"^18.0.0" from @testing-library/react@13.4.0
+npm error node_modules/@testing-library/react
+npm error   @testing-library/react@"^13.0.0" from the root project
+npm error
+npm error
+npm error
+npm error For a full report see:
+npm error C:\Users\ACER\AppData\Local\npm-cache\_logs\2025-01-22T09_18_39_789Z-eresolve-report.txt
+npm error A complete log of this run can be found in: C:\Users\ACER\AppData\Local\npm-cache\_logs\2025-01-22T09_18_39_789Z-debug-0.log
+`npm install --no-audit --save @testing-library/jest-dom@^5.14.1 @testing-library/react@^13.0.0 @testing-library/user-event@^13.2.1 web-vitals@^2.1.0` 
+failed
+"
+
+So stackoverflow recommend me this :
+'npm config set legacy-peer-deps true'
+
+which for :
+'The --legacy-peer-deps flag was introduced with v7 as a way to bypass peerDependency auto-installation; it tells NPM to ignore peer dependencies and proceed with the installation anyway. This is how things used to be with NPM v4 through v6.'
+
+and then i remove the original project and reinstall:
+'npx create-react-app reactlrn'
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -14,6 +53,20 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
+and then i got error again which require stack:
+- .\taiLearn\reactlrn\node_modules\ajv-keywords\dist\definitions\typeof.js
+- .\taiLearn\reactlrn\node_modules\ajv-keywords\dist\keywords\typeof.js
+- .\taiLearn\reactlrn\node_modules\ajv-keywords\dist\index.js
+- .\taiLearn\reactlrn\node_modules\schema-utils\dist\validate.js
+- .\taiLearn\reactlrn\node_modules\schema-utils\dist\index.js
+- .\taiLearn\reactlrn\node_modules\webpack-dev-server\lib\Server.js
+- .\taiLearn\reactlrn\node_modules\react-scripts\scripts\start.js
+
+so stackoverflow recommend doing:
+'npm install --save-dev ajv@ 
+
+
+'
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.\
